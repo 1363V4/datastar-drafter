@@ -1,0 +1,11 @@
+[project]
+name = "datastar-drafter"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "faker>=37.1.0",
+    "quart>=0.20.0",
+    "tinydb>=4.8.2",
+]

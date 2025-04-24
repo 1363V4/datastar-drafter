@@ -1,0 +1,334 @@
+@import url('gold.css');
+@import url('https://fonts.googleapis.com/css2?family=National+Park&family=Sigmar+One&display=swap');
+
+:root {
+    --primary: #137481;
+    --secondary: #4C3F23;
+    --bg-primary: #967435;
+    --bg-secondary: #2D271C;
+    --bg-2: hsl(from var(--bg-secondary) h s 20);
+    --bg-3: hsl(from var(--bg-secondary) h s 30);
+}
+
+html {
+    font-family: "National Park", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 5vh 1fr 5vh;
+    overflow: hidden;
+    background-color: var(--bg-secondary);
+}
+
+header, footer {
+    color: white;
+    width: 20rem;
+    height: 100%;
+    background: var(--bg-secondary);
+    background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+    background-size: 200% 200%;
+    animation: animateBackground 10s ease infinite;
+    background-blend-mode: lighten;
+    filter: drop-shadow(0px 0px 2px var(--bg-primary));
+    cursor: default;
+}
+
+@keyframes animateBackground {
+    50% { background-position: 100% 100%; }
+}
+
+header {
+    font-family: "Sigmar One", sans-serif;
+    border-bottom-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+
+footer {
+    border-top-right-radius: 5rem;
+    border-top-left-radius: 5rem;
+}
+
+.material-icons {
+    font-size: unset !important;
+    vertical-align: middle;
+}
+
+/* Elements */
+
+.button {
+    background-color: var(--primary);
+    border: 5px solid var(--secondary);
+    border-radius: 1rem;
+    inline-size: max-content;
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: white;
+    background: var(--secondary);
+}
+
+#main {
+    height: 100%;
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: 10rem 1fr 10rem;
+    gap: 2rem;
+    padding-top: 6rem;
+}
+
+#blue-side, #red-side {
+    display: grid;
+    grid-template-rows: 1rem repeat(5, 1fr);
+    gap: 1rem;
+    height: 17rem;
+    color: blue;
+    font-weight: bold;
+    padding: .2rem;
+    border: 1px solid var(--bg-2);
+    border-radius: .2rem;
+    filter: drop-shadow(0px 0px 4px var(--bg-2));
+}
+
+#picker {
+    display: grid;
+    grid-template-rows: 1rem 1fr;
+    gap: .1rem;
+    align-items: start;
+    transition: .2s linear;
+}
+
+#roles {
+    display: grid;
+    grid-template-columns: repeat(5, 1rem) 1fr 5rem;
+    gap: .2rem;
+}
+
+#roles input {
+    color: white;
+    font-size: .6rem;
+    padding-inline: .4rem;
+    border-radius: .5rem;
+}
+
+#roles img {
+    height: 1rem;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+#roles img:hover:not([selected]) {
+    filter: drop-shadow(0px 0px 4px var(--primary));
+}
+
+img[selected] {
+    outline: #FF000050 solid 1px;
+    filter: drop-shadow(0px 0px 4px red);
+    border-top-right-radius: 0.4rem;
+}
+
+#legends {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: .1rem;
+}
+
+.legend {
+    width: 48px;    
+    height: 48px;
+    background-image: url('/static/img/champion0.png');
+    background-size: 480px 288px;
+    cursor: pointer;
+    filter: grayscale(.8);
+}
+
+.legend:hover:not(.nope) {
+    filter: contrast(1.5) drop-shadow(0px 0px 8px var(--primary));
+}
+
+[role="tooltip"] {
+    font-size: 50%;
+    font-weight: bold;
+    visibility: hidden;
+    position: absolute;
+    place-self: anchor-center;
+    top: -100%;
+    background-color: white;
+    border: 2px solid var(--primary);
+    border-radius: 2rem;
+    padding-inline: .2rem;
+    filter: drop-shadow(0px 0px 2px white);
+    width: max-content;
+    opacity: .7;
+    pointer-events: none;
+}
+
+[aria-describedby]:hover > [role="tooltip"] {
+    visibility: visible;
+}
+
+.pick {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: .2rem;
+    height: 48px;
+}
+
+#red-side .pick {
+    grid-template-columns: 1fr 48px;
+}
+
+#red-side > pick {
+    grid-template-columns: 1fr 2rem;
+}
+
+
+.pick > .legend {
+    aspect-ratio: 1/1;
+}
+
+.pick > div:first-child:not(.pick-legend) {
+    background: var(--bg-2);
+}
+
+.pick > div:last-child:not(.pick-legend) {
+    background: var(--bg-3);
+}
+
+.pick-legend {
+    width: 48px;    
+    height: 48px;
+    background-image: url('/static/img/champion0.png');
+    background-size: 480px 288px;  
+    place-self: center; 
+}
+
+#red-side {
+    color: red;
+}
+
+#info {
+    place-self: center;
+    background: var(--bg-primary);
+    border: 1px solid var(--primary);
+    border-radius: 4rem;
+    margin-top: 2rem;
+    padding-inline: .5rem;
+}
+
+.nope {
+    cursor: not-allowed;
+    filter: invert(1);
+}
+
+
+
+
+
+
+
+/* Pokémon Battle Effect View Transition */
+
+/* Old view transitions out: it rotates, scales down, and its visible area shrinks */
+@keyframes pokemon-old-animation {
+    0% {
+      clip-path: circle(150% at 50% 50%);
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+    100% {
+      clip-path: circle(0% at 50% 50%);
+      opacity: 0;
+      transform: rotate(360deg) scale(0.5);
+    }
+}
+  
+/* New view transitions in: it starts hidden (clipped, rotated, and scaled down)
+    and then expands to fill the screen */
+@keyframes pokemon-new-animation {
+0% {
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+    transform: rotate(-360deg) scale(0.5);
+}
+100% {
+    clip-path: circle(150% at 50% 50%);
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+}
+
+/* Apply the custom Pokémon animation when transitioning out */
+::view-transition-old(pokemon) {
+animation: 800ms cubic-bezier(0.4, 0, 0.2, 1) both pokemon-old-animation;
+}
+
+/* Apply the complementary animation when transitioning in */
+::view-transition-new(pokemon) {
+animation: 800ms cubic-bezier(0.4, 0, 0.2, 1) 100ms both pokemon-new-animation;
+}
+
+@keyframes fade-in {
+from {
+    opacity: 0;
+}
+}
+
+@keyframes fade-out {
+to {
+    opacity: 0;
+}
+}
+
+@keyframes slide-from-right {
+from {
+    transform: translateX(90px);
+}
+}
+
+@keyframes slide-to-left {
+to {
+    transform: translateX(-90px);
+}
+}
+
+::view-transition-old(slide-right) {
+    animation: 180ms cubic-bezier(0.4, 0, 1, 1) both fade-out, 600ms
+        cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+
+::view-transition-new(slide-right) {
+    animation: 420ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in, 600ms
+        cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
+
+::view-transition-old(slide-left) {
+    animation: 180ms cubic-bezier(0.4, 0, 1, 1) both fade-out, 600ms
+        cubic-bezier(0.4, 0, 0.2, 1) both slide-to-right;
+}
+
+::view-transition-new(slide-left) {
+    animation: 420ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in, 600ms
+        cubic-bezier(0.4, 0, 0.2, 1) both slide-from-left;
+}
+
+@keyframes slide-from-left {
+    from {
+        transform: translateX(-90px);
+    }
+}
+
+@keyframes slide-to-right {
+    to {
+        transform: translateX(90px);
+    }
+}
+

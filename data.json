@@ -1,0 +1,327 @@
+{
+  "games": {
+    "1": {
+      "blue": "Margaret Preston",
+      "name": "DarkOrchid",
+      "picks": {
+        "0": "Annie",
+        "1": "Ahri",
+        "2": "Maitre Yi",
+        "3": "Maitre Yi",
+        "4": "Annie",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "10": {
+      "blue": "Margaret Preston",
+      "name": "AntiqueWhite",
+      "picks": {
+        "0": "Annie",
+        "1": "Kayle",
+        "2": "Xerath",
+        "3": "Shyvana",
+        "4": "Ahri",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "11": {
+      "blue": "Margaret Preston",
+      "name": "LightSeaGreen",
+      "picks": {
+        "0": "Annie",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "12": {
+      "blue": "Margaret Preston",
+      "name": "Crimson",
+      "picks": {
+        "0": "Annie",
+        "1": "Xerath",
+        "2": "Shyvana",
+        "3": "Ahri",
+        "4": "Fiora",
+        "5": "Ziggs",
+        "6": "Lulu",
+        "7": "Zyra",
+        "8": "Gnar",
+        "9": "Ashe"
+      },
+      "red": "AI"
+    },
+    "13": {
+      "blue": "Margaret Preston",
+      "name": "DarkViolet",
+      "picks": {
+        "0": "Annie",
+        "1": "Graves",
+        "2": "Fiora",
+        "3": "Ziggs",
+        "4": "Quinn",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "14": {
+      "blue": "Margaret Preston",
+      "name": "Thistle",
+      "picks": {
+        "0": "Annie",
+        "1": "Xerath",
+        "2": "Ahri",
+        "3": "Graves",
+        "4": "Draven",
+        "5": "Aurelion Sol",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "15": {
+      "blue": "Margaret Preston",
+      "name": "MintCream",
+      "picks": {
+        "0": "Annie",
+        "1": "Graves",
+        "2": "Ziggs",
+        "3": "Ryze",
+        "4": "Syndra",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "16": {
+      "blue": "Margaret Preston",
+      "name": "LightSteelBlue",
+      "picks": {
+        "0": "Ahri",
+        "1": "Lulu",
+        "2": "Alistar",
+        "3": "Sion",
+        "4": "BelVeth",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "17": {
+      "blue": "Margaret Preston",
+      "name": "Crimson",
+      "picks": {
+        "0": "Annie",
+        "1": "Fiora",
+        "2": "Jayce",
+        "3": "Sivir",
+        "4": "Olaf",
+        "5": "Tryndamere",
+        "6": "Ashe",
+        "7": "Kindred",
+        "8": "Alistar",
+        "9": "Braum"
+      },
+      "red": "AI"
+    },
+    "18": {
+      "blue": "Margaret Preston",
+      "name": "LightSteelBlue",
+      "picks": {
+        "0": "Annie",
+        "1": "Xerath",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "19": {
+      "blue": "Margaret Preston",
+      "name": "DarkTurquoise",
+      "picks": {
+        "0": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "2": {
+      "blue": "Margaret Preston",
+      "name": "DarkOrange",
+      "picks": {
+        "0": "Annie",
+        "1": "Annie",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "3": {
+      "blue": "Margaret Preston",
+      "name": "Olive",
+      "picks": {
+        "0": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "4": {
+      "blue": "Margaret Preston",
+      "name": "OliveDrab",
+      "picks": {
+        "0": "Annie",
+        "1": "Kayle",
+        "2": "Volibear",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "5": {
+      "blue": "Margaret Preston",
+      "name": "SlateGray",
+      "picks": {
+        "0": "Annie",
+        "1": "Annie",
+        "2": "Kayle",
+        "3": "Xerath",
+        "4": "Shyvana",
+        "5": "Ahri",
+        "6": "Fizz",
+        "7": "Graves",
+        "8": "Varus",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "6": {
+      "blue": "Margaret Preston",
+      "name": "Turquoise",
+      "picks": {
+        "0": "Volibear",
+        "1": "Xerath",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "7": {
+      "blue": "Margaret Preston",
+      "name": "Tomato",
+      "picks": {
+        "0": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "8": {
+      "blue": "Margaret Preston",
+      "name": "GreenYellow",
+      "picks": {
+        "0": "Annie",
+        "1": "Kayle",
+        "2": "Shyvana",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    },
+    "9": {
+      "blue": "Margaret Preston",
+      "name": "PeachPuff",
+      "picks": {
+        "0": "Annie",
+        "1": "Xerath",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": ""
+      },
+      "red": "AI"
+    }
+  }
+}

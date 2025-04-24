@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drafter</title>
+    <link rel="shortcut icon" href="/static/img/lol-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script type="module" src="https://cdn.jsdelivr.net/gh/starfederation/datastar@1.0.0-beta.11/bundles/datastar.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header 
+    class="gc">
+    <a href="/">
+        <p><span class="material-icons">sports_mma</span> D*RAFTER <span class="material-icons">thumb_up</span></p>
+    </a>
+    </header>
+    <main id="main" class="gc" data-view-transition="'pokemon'">
+        <div class="button gp gm">Ranked</div>
+        <div class="button gp gm">VS Player</div>
+        <div 
+        class="button gp gm"
+        data-on-click="@get('/game')">VS AI</div>
+        </main>
+    <footer class="gc">
+        <p>Made with love by a cat <span class="material-icons">pets</span></p>
+    </footer>
+</body>
+</html>
