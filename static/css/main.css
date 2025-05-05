@@ -88,14 +88,19 @@ footer {
 #blue-side, #red-side {
     display: grid;
     grid-template-rows: 1rem repeat(5, 1fr);
-    gap: 1rem;
-    height: 17rem;
-    color: blue;
-    font-weight: bold;
+    gap: .8rem;
+    background: lightblue;
+    color: white;
     padding: .2rem;
     border: 1px solid var(--bg-2);
     border-radius: .2rem;
     filter: drop-shadow(0px 0px 4px var(--bg-2));
+}
+
+#blue-side p, #red-side p {
+    padding-top: .2rem;
+    color: black;
+    font-weight: bold;
 }
 
 #picker {
@@ -138,7 +143,7 @@ img[selected] {
 #legends {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    gap: .1rem;
+    gap: .3rem;
 }
 
 .legend {
@@ -155,7 +160,7 @@ img[selected] {
 }
 
 [role="tooltip"] {
-    font-size: 50%;
+    font-size: 60%;
     font-weight: bold;
     visibility: hidden;
     position: absolute;
@@ -167,7 +172,7 @@ img[selected] {
     padding-inline: .2rem;
     filter: drop-shadow(0px 0px 2px white);
     width: max-content;
-    opacity: .7;
+    opacity: .8;
     pointer-events: none;
 }
 
@@ -178,7 +183,7 @@ img[selected] {
 .pick {
     display: grid;
     grid-template-columns: 48px 1fr;
-    gap: .2rem;
+    gap: .3rem;
     height: 48px;
 }
 
@@ -189,7 +194,6 @@ img[selected] {
 #red-side > pick {
     grid-template-columns: 1fr 2rem;
 }
-
 
 .pick > .legend {
     aspect-ratio: 1/1;
@@ -212,7 +216,23 @@ img[selected] {
 }
 
 #red-side {
-    color: red;
+    background: lightcoral;
+}
+
+.pick > div {
+    animation: slide-in-right 1s ease forwards;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 #info {
@@ -240,17 +260,17 @@ img[selected] {
 /* Old view transitions out: it rotates, scales down, and its visible area shrinks */
 @keyframes pokemon-old-animation {
     0% {
-      clip-path: circle(150% at 50% 50%);
-      opacity: 1;
-      transform: rotate(0deg) scale(1);
+        clip-path: circle(150% at 50% 50%);
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
     }
     100% {
-      clip-path: circle(0% at 50% 50%);
-      opacity: 0;
-      transform: rotate(360deg) scale(0.5);
+        clip-path: circle(0% at 50% 50%);
+        opacity: 0;
+        transform: rotate(360deg) scale(0.5);
     }
 }
-  
+
 /* New view transitions in: it starts hidden (clipped, rotated, and scaled down)
     and then expands to fill the screen */
 @keyframes pokemon-new-animation {
@@ -268,12 +288,12 @@ img[selected] {
 
 /* Apply the custom Pokémon animation when transitioning out */
 ::view-transition-old(pokemon) {
-animation: 800ms cubic-bezier(0.4, 0, 0.2, 1) both pokemon-old-animation;
+animation: 2s linear both pokemon-old-animation;
 }
 
 /* Apply the complementary animation when transitioning in */
 ::view-transition-new(pokemon) {
-animation: 800ms cubic-bezier(0.4, 0, 0.2, 1) 100ms both pokemon-new-animation;
+animation: 2s linear 100ms both pokemon-new-animation;
 }
 
 @keyframes fade-in {
